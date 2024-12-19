@@ -1,23 +1,26 @@
 const express = require('express');
 const app = express();
-const apiRoutes = require('../app_api/routes/index');
-const webRoutes = require('../routes/index');
 
-// Middleware'ler
+// Temel middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-// View engine setup (eğer view'larınız varsa)
-app.set('views', './views');
-app.set('view engine', 'jade'); // veya kullandığınız template engine
+// Test endpoint'i
+app.get('/test', (req, res) => {
+    res.json({ message: 'Test başarılı!' });
+});
 
-// Routes
-app.use('/', webRoutes);        // Web routes için
-app.use('/api', apiRoutes);     // API routes için
+// Ana API rotalarını içe aktar
+try {
+    const apiRoutes = require('../app_api/routes/index');
+    app.use('/api', apiRoutes);
+} catch (error) {
+    console.error('API rotaları yüklenirken hata:', error);
+}
 
-// 404 handler
-app.use(function(req, res, next) {
-    res.status(404).json({error: "Not Found"});
+// Hata yakalama
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500).json({ error: 'Sunucu hatası', details: err.message });
 });
 
 module.exports = app;
