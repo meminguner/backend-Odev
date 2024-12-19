@@ -1,21 +1,23 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 
-// Temel middleware
-app.use(express.json());
-
-// Test endpoint'i
-app.get('/test', (req, res) => {
-    res.json({ message: 'Test başarılı!' });
+// MongoDB bağlantısı
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log('MongoDB bağlantısı başarılı');
+}).catch(err => {
+    console.error('MongoDB bağlantı hatası:', err);
 });
 
-// Ana API rotalarını içe aktar
-try {
-    const apiRoutes = require('../app_api/routes/index');
-    app.use('/api', apiRoutes);
-} catch (error) {
-    console.error('API rotaları yüklenirken hata:', error);
-}
+// Middleware
+app.use(express.json());
+
+// API rotalarını içe aktar
+const apiRoutes = require('../app_api/routes/index');
+app.use('/api', apiRoutes);
 
 // Hata yakalama
 app.use((err, req, res, next) => {
