@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-require('./app_api/models/db');
+require('./app_api/models/db.js');
 
 // MongoDB bağlantısı
 mongoose.connect(process.env.MONGODB_URI)
