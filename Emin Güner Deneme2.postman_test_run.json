@@ -1,0 +1,301 @@
+{
+	"id": "b210cdbb-ef83-4f3e-b23f-cb88997f44dd",
+	"name": "Emin Güner Deneme2",
+	"timestamp": "2024-12-20T08:39:59.911Z",
+	"collection_id": "38306412-7a6f24b4-ff4f-4dd2-97e9-c64b930ba509",
+	"folder_id": 0,
+	"environment_id": "38306412-ba0ecbc8-4b74-41b7-a05b-b2a075d7675d",
+	"totalPass": 9,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-20T08:39:53.668Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "52e59724-8c27-4d7b-9cae-f9e73b43faa4",
+			"name": "Emin Add Venue",
+			"url": "localhost:3000/api/venues",
+			"time": 520,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				520
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "f10ea7ee-3fc7-48c0-8b9d-564ca5d345a1",
+			"name": "Emin List Nearby Venues",
+			"url": "localhost:3000/api/venues?lat=37&long=35",
+			"time": 264,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				264
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a06abeac-abf6-4133-bd60-7c5a0f4d4b7b",
+			"name": "Emin Get Venue",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1",
+			"time": 383,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				383
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6611a30a-4b9d-49a5-8977-2337395b25f2",
+			"name": "Emin Update Venue",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1",
+			"time": 236,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				236
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "74b5b26b-c8d9-48b2-9cb4-47b172c95bc8",
+			"name": "Emin Add Comment",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1/comments",
+			"time": 420,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				420
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "41dbc158-dfd9-4775-895a-9c7abd2c4439",
+			"name": "Emin Get Comment",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1/comments/67652d5b7dcda287e14333cf",
+			"time": 1280,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1280
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ae25f83e-e506-41dd-b8c5-5a7d48cc2b78",
+			"name": "Emin Update Comment",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1/comments/67652d5b7dcda287e14333cf",
+			"time": 715,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				715
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "1a97be0a-30e7-4231-bc3a-3d0541387970",
+			"name": "Emin Delete Comment",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1/comments/67652d5b7dcda287e14333cf",
+			"time": 418,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				418
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b28d23f7-5837-4559-98da-940d00d0a3e6",
+			"name": "Emin Delete Venue",
+			"url": "localhost:3000/api/venues/67652d597dcda287e14333c1",
+			"time": 1537,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1537
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 5773,
+	"collection": {
+		"requests": [
+			{
+				"id": "52e59724-8c27-4d7b-9cae-f9e73b43faa4",
+				"method": "POST"
+			},
+			{
+				"id": "f10ea7ee-3fc7-48c0-8b9d-564ca5d345a1",
+				"method": "GET"
+			},
+			{
+				"id": "a06abeac-abf6-4133-bd60-7c5a0f4d4b7b",
+				"method": "GET"
+			},
+			{
+				"id": "6611a30a-4b9d-49a5-8977-2337395b25f2",
+				"method": "PUT"
+			},
+			{
+				"id": "74b5b26b-c8d9-48b2-9cb4-47b172c95bc8",
+				"method": "POST"
+			},
+			{
+				"id": "41dbc158-dfd9-4775-895a-9c7abd2c4439",
+				"method": "GET"
+			},
+			{
+				"id": "ae25f83e-e506-41dd-b8c5-5a7d48cc2b78",
+				"method": "PUT"
+			},
+			{
+				"id": "1a97be0a-30e7-4231-bc3a-3d0541387970",
+				"method": "DELETE"
+			},
+			{
+				"id": "b28d23f7-5837-4559-98da-940d00d0a3e6",
+				"method": "DELETE"
+			}
+		]
+	}
+}
